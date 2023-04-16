@@ -2,9 +2,9 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium import webdriver
 from calculation import *
-from treat_data import *
 from sequence import *
 from get_data import *
+from treat_data import *
 
 # Inicializar o driver
 service = Service(ChromeDriverManager().install())
@@ -14,10 +14,10 @@ driver = webdriver.Chrome(service=service)
 url = 'https://blaze.com/pt/games/crash?modal=crash_history_index'
 
 # Navegar até o url e pegar os dados
-multiplier_dict = get_data(driver, url)
+multiplier_list = get_data(driver, url)
 
 # Tratar os dados
-data = treat_data(multiplier_dict)
+data = treat_data(multiplier_list) 
 
 # Pegando inputs
 bets = int(input('Quantas vezes você vai apostar: '))

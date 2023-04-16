@@ -1,11 +1,11 @@
-data = {}
+data = []
+multiplier_list = ['8.156,97 x']
+def treat_data(multiplier_list):
+    for number in multiplier_list:       
+        number = number.replace('.', '').replace(' x', '')
+        number = float(number.replace(',', '.'))
 
-def treat_data(multiplier_dict):
-    c = 0
-    
-    for element in multiplier_dict:
-        multiplier = float(element.text.replace(' x', ''))
-        data[c] = multiplier
-        c += 1
-
+        data.append(number)
+   
     return data
+
