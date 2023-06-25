@@ -6,7 +6,7 @@ def get_data(driver, url):
     multiplier_list = []
     history = driver.find_element(By.ID, 'history')
 
-    for page in range(0, 50):
+    for page in range(0, 20):
         multiplier_dict = history.find_elements(By.CLASS_NAME, 'bet-amount')
         
         for element in multiplier_dict:
