@@ -1,4 +1,6 @@
 data = []
+
+
 multiplier_list = ['8.156,97 x']
 def treat_data(multiplier_list):
     for number in multiplier_list:       

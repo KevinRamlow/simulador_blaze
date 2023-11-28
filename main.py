@@ -7,8 +7,8 @@ from get_data import *
 from treat_data import *
 
 # Inicializar o driver
-service = Service(ChromeDriverManager().install())
-driver = webdriver.Chrome(service=service)
+service = ChromeDriverManager(version="119.0.6045.160").install()
+driver = webdriver.Chrome(service)
 
 # Variaveis
 url = 'https://blaze.com/pt/games/crash?modal=crash_history_index'
